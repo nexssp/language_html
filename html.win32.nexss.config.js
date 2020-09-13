@@ -1,4 +1,7 @@
-let languageConfig = Object.assign({}, require("../config.win32"));
+let languageConfig = Object.assign(
+  {},
+  require(`../config.${process.platform}`)
+);
 languageConfig.title = "HTML";
 languageConfig.description =
   "Hypertext Markup Language (HTML) is the standard markup language for documents designed to be displayed in a web browser";
@@ -14,8 +17,8 @@ languageConfig.compilers = {
     command: "",
     stream: "transformFile",
     args: "<file>",
-    help: ``
-  }
+    help: ``,
+  },
 };
 languageConfig.errors = require("./nexss.html.errors");
 languageConfig.languagePackageManagers = {};
