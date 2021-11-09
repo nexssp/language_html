@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpine.js example</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine.js"></script>
+</head>
+
+<body>
+    <h1>Alipne.js Example</h1>
+    <div x-data="{ search: '' }">
+        <input type="text" x-model="search">
+
+        Searching for: <span x-text="search"></span>
+    </div>
+    <div x-data="{ isOpen: true}">
+        <button @click="isOpen = !isOpen">Hide</button>
+        <h1 x-show="isOpen">Some text to hide</h1>
+    </div>
+    <div>
+        <p>To start with Nexss Programmer:</p>
+        <code>
+            nexss file add my-alpinejs-test.html --template=alpineJS # adds file myfile
+            nexss my-alpinejs-test.html --nxsField --server 
+        </code>
+
+        And then open browser: http://127.0.0.1:9369
+    </div>
+    <div>
+        See more examples at: <a target="_blank" href="https://alpinejs.dev/">alpinejs.dev</a>
+    </div>
+</body>
+
+</html>
